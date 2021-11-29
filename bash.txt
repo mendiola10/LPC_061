@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#este script guarda y comprime el contenido de una carpeta a un fichero en una carpeta de respaldo. 
+
+#variables
+fecha = 'date +%Y.%m.%d­%H.%M.%S'
+ruta_ficheros = ~/copia_respaldo 
+fichero_ultima_copia =$ruta_ficheros/fecha­ultima­copia­.txt
+fichero_comprimido =$ruta_fucheros/total­$fecha.tar.zip
+directorio_a_copiar =~/directorio_a_copiar
+
+#mostrar error si no existe el directorio
+if [ ! ­d $directoria_a_copiar]; then
+	echo "No exixte el directorio a copiar."
+	exit 1
+fi
+
+# si no exixte el directorio de los ficheros, se creara
+if [ ! ­d $ruta_ficheros]; then
+	mkdirs $ruta_ficheros
+fi
+
+# guardar fechas
+echo $fecha > $fichero_ultima_copia
+
+# empaquetamos y comprimimos 
+zip ­-r $fichero_comprimido $directoria_a_copiar
