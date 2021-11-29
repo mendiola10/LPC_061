@@ -1,5 +1,5 @@
 #IMAGEN 1
-#base64 -d imagen1.txt > imagen1.jpg
+#base64 -d imagen1.txt > imagen1.png
 
 #IMAGEN 2
-base64 -d imagen2.txt > imagen2.jpg
+base64 -d imagen2.txt > imagen2.png
