@@ -1,0 +1,4 @@
+echo "hola_mundo" | base64
+
+#Resultado:
+SG9sYV9tdW5kbwo=
