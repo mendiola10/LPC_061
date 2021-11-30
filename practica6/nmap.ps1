@@ -1,4 +1,4 @@
-Start-Transcript -Path ".\transcript.txt"
+Start-Transcript -Path ".\transcripcion.txt"
 
 Write-Host "Mi IP local"
 Get-NetIPAddress -AddressFamily IPv4
